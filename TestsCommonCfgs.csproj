@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <CfgFolder>$(PathPrefix)$(PathSuffix)</CfgFolder>
+    <OutputPath>$(Root)\bin\$(CfgFolder)\</OutputPath>
+    <BaseIntermediateOutputPath>$(Root)\Trash\$(CfgFolder)\$(AssemblyName)\</BaseIntermediateOutputPath>
+    <MAPIPath>$(Root)\Core\Bin\$(CfgFolder)</MAPIPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(MSCVersionShortMajor)' == '11'">
+    <NanoPath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Root)\Extern\NCAD3\lib11r</NanoPath>
+    <NanoPath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Root)\Extern\NCAD3\lib11x64r</NanoPath>
+    <NanoPath Condition="'$(Configuration)|$(Platform)'=='Debug MD|Win32'">$(Root)\Extern\NCAD3\lib11mdd</NanoPath>
+    <NanoPath Condition="'$(Configuration)|$(Platform)'=='Debug MD|x64'">$(Root)\Extern\NCAD3\lib11x64mdd</NanoPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(MSCVersionShortMajor)' == '14'">
+    <NanoPath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Root)\Extern\NCAD3\lib142r</NanoPath>
+    <NanoPath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Root)\Extern\NCAD3\lib142x64r</NanoPath>
+    <NanoPath Condition="'$(Configuration)|$(Platform)'=='Debug MD|Win32'">$(Root)\Extern\NCAD3\lib142mdd</NanoPath>
+    <NanoPath Condition="'$(Configuration)|$(Platform)'=='Debug MD|x64'">$(Root)\Extern\NCAD3\lib142x64mdd</NanoPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>DEBUG;TRACE;$(DefineConstants)</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug MD|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>DEBUG;TRACE;$(DefineConstants)</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+<!--
+    <DefineConstants>TRACE;$(DefineConstants)</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+-->
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>DEBUG;TRACE;$(DefineConstants)</DefineConstants>
+    <DebugType>full</DebugType>
+
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>DEBUG;TRACE;$(DefineConstants)</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug MD|Win32'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>DEBUG;TRACE;$(DefineConstants)</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+<!--
+    <DefineConstants>TRACE;$(DefineConstants)</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+-->
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>DEBUG;TRACE;$(DefineConstants)</DefineConstants>
+    <DebugType>full</DebugType>
+
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWarn>649,168,219</NoWarn>
+  </PropertyGroup>
+</Project>

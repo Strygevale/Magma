@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(ProjectCustomMode)'==''">
+    <ProjectCustomMode Condition="$(SolutionName.Contains('2019'))">2019</ProjectCustomMode>
+    <ProjectCustomMode Condition="$(SolutionName.Contains('2017'))">2017</ProjectCustomMode>
+    <ProjectCustomMode Condition="$(SolutionName.Contains('2015'))">2015</ProjectCustomMode>
+    <ProjectCustomMode Condition="$(SolutionName.Contains('2013'))">2013</ProjectCustomMode>
+    <ProjectCustomMode Condition="$(SolutionName.Contains('2012'))">2012</ProjectCustomMode>
+    <ProjectCustomMode Condition="$(SolutionName.Contains('2010'))">2010</ProjectCustomMode>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(ProjectCustomMode)'=='2019'">
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SolutionVersion>2019</SolutionVersion>
+    <MSCVersionShort>142</MSCVersionShort>
+    <MSCVersionShortMajor>14</MSCVersionShortMajor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(ProjectCustomMode)'=='2017'">
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SolutionVersion>2017</SolutionVersion>
+    <MSCVersionShort>141</MSCVersionShort>
+    <MSCVersionShortMajor>14</MSCVersionShortMajor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(ProjectCustomMode)'=='2015'">
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SolutionVersion>2015</SolutionVersion>
+    <MSCVersionShort>14</MSCVersionShort>
+    <MSCVersionShortMajor>14</MSCVersionShortMajor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(ProjectCustomMode)'=='2013'">
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SolutionVersion>2013</SolutionVersion>
+    <MSCVersionShort>12</MSCVersionShort>
+    <MSCVersionShortMajor>12</MSCVersionShortMajor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(ProjectCustomMode)'=='2012'">
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SolutionVersion>2012</SolutionVersion>
+    <MSCVersionShort>11</MSCVersionShort>
+    <MSCVersionShortMajor>11</MSCVersionShortMajor>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <LangVersion Condition="'$(VisualStudioVersion)'!='10.0'">5</LangVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <FileAlignment>512</FileAlignment>
+    <PathPrefix>Output</PathPrefix>
+    <PathPrefix Condition="'$(Configuration)'=='Debug'">DebugMcGe$(MSCVersionShort)W</PathPrefix>
+    <PathPrefix Condition="'$(Configuration)'=='Debug MD'">DebugMcGe$(MSCVersionShort)WD</PathPrefix>
+    <PathPrefix Condition="'$(Configuration)'=='Release'">ReleaseMcGe$(MSCVersionShort)W</PathPrefix>
+    <PathSuffix Condition="'$(Platform)'=='x64'">x64</PathSuffix>
+  </PropertyGroup>
+</Project>
